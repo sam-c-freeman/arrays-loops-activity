@@ -8,6 +8,8 @@
  */
 
 
+
+
 // Example output
 // 1. swimming
 // 2. board games
@@ -91,6 +93,20 @@
  * 3. Output the array and its greatest position distance
  */
 
+//First solve easier problem of finding repeating numbers
+let numbers = [0, 2, 2, 7, 4, 1, 7, 8, 9, 1, 0, 1];
+let counters = [];
+// counters[7] = 4;
+// console.table(counters);
+
+//Counts each time a number occurs again
+for (let item of numbers){
+    if(counters[item] >= 0){
+        counters[item] += 1;
+    }else {
+        counters[item] = 1;
+    }
+}
 
 // Example output
 // 5, 1, 8, 2, 9, 1, 4, 5, 0
